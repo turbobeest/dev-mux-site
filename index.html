@@ -24,8 +24,8 @@
     <meta name="twitter:description" content="The live cockpit for fleets of AI coding agents. Persistent sessions, your machines, one pane of glass." />
     <meta name="twitter:image" content="https://dev-mux.com/og.png" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2307080b'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%2336e6a0'/%3E%3C/svg%3E" />
-    <script type="module" crossorigin src="/assets/index-r_mD5P2f.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-kIQsOyg_.css">
+    <script type="module" crossorigin src="/assets/index-B-HFnsKW.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CGjOJoSE.css">
   </head>
   <body>
     <!-- ===== inline SVG icon sprite (replaces the Phosphor web font) ===== -->
@@ -208,18 +208,18 @@
               </h2>
               <p class="reveal mt-5 text-pretty text-ink-300">
                 The <span class="text-ink-100">hub</span> is a robust, hyper-efficient,
-                persistent coordinator. An intricate weave of
-                <span class="text-ink-100">mosh</span> and
-                <span class="text-ink-100">tmux</span> keeps every session alive across
-                dropped connections, sleeps, and network switches — close your laptop on
-                the train, reopen at your desk, and your agents are exactly where you
-                left them. Each <span class="text-ink-100">spoke</span> is one of your
-                repos, on a machine you control.
+                persistent coordinator. Every session lives in
+                <span class="text-ink-100">tmux</span> on the hub and reconnects
+                automatically, staying alive across dropped connections, sleeps, and
+                network switches — close your laptop on the train, reopen at your desk,
+                and your agents are exactly where you left them. Each
+                <span class="text-ink-100">spoke</span> is one of your repos, on a machine
+                you control.
               </p>
               <ul class="reveal mt-7 flex flex-col gap-3.5">
                 <li class="flex items-start gap-3">
                   <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-panel-2 edge"><svg class="icon h-3.5 w-3.5 text-mint"><use href="#i-signal"/></svg></span>
-                  <p class="text-sm text-ink-300"><span class="text-ink-100">Persistent by design.</span> mosh + tmux hold sessions through drops, sleeps, and IP changes — nothing to reconnect.</p>
+                  <p class="text-sm text-ink-300"><span class="text-ink-100">Persistent by design.</span> tmux on the hub holds sessions through drops, sleeps, and IP changes — the cockpit reconnects automatically.</p>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md bg-panel-2 edge"><svg class="icon h-3.5 w-3.5 text-mint"><use href="#i-server"/></svg></span>
@@ -415,7 +415,7 @@
             </div>
             <div class="mt-5 flex flex-wrap gap-2 font-mono text-[11px] text-ink-400">
               <span class="rounded-md bg-bg-2 px-2 py-1 edge">claude-code</span>
-              <span class="rounded-md bg-bg-2 px-2 py-1 edge">mosh</span>
+              <span class="rounded-md bg-bg-2 px-2 py-1 edge">ssh</span>
               <span class="rounded-md bg-bg-2 px-2 py-1 edge">tmux</span>
               <span class="rounded-md bg-bg-2 px-2 py-1 edge">websocket pty</span>
             </div>
@@ -425,7 +425,7 @@
             <span class="grid h-10 w-10 place-items-center rounded-lg bg-panel-2 edge"><svg class="icon h-5 w-5 text-mint"><use href="#i-activity"/></svg></span>
             <div>
               <h3 class="text-lg font-semibold text-ink-100">Sessions that never drop</h3>
-              <p class="mt-1.5 text-sm text-ink-300">mosh + tmux keep every agent alive across drops, sleeps, and network switches.</p>
+              <p class="mt-1.5 text-sm text-ink-300">tmux on the hub plus automatic reconnect keep every agent alive across drops, sleeps, and network switches.</p>
             </div>
           </article>
 
@@ -481,7 +481,27 @@
           <p class="reveal mt-4 text-ink-300">Every plan ships a dedicated hub sized for its fleet — with measured 10&times; headroom to spare.</p>
         </div>
 
-        <div class="grid items-start gap-5 lg:grid-cols-3">
+        <div class="grid items-start gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- DIY (coming soon — self-hosted, D-3 fast-follow) -->
+          <div class="reveal flex flex-col rounded-2xl bg-panel p-7 edge opacity-60">
+            <div class="flex items-center justify-between gap-2">
+              <h3 class="font-mono text-sm uppercase tracking-wider text-ink-300">DIY</h3>
+              <span class="rounded-full bg-panel-2 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-ink-400 edge">Coming soon</span>
+            </div>
+            <div class="mt-4 flex items-end gap-1">
+              <span class="text-4xl font-semibold text-ink-100">$15</span>
+              <span class="pb-1 text-sm text-ink-400">/mo</span>
+            </div>
+            <p class="mt-1 text-xs text-ink-400">or $150/yr · <span class="text-mint">2 months free</span></p>
+            <p class="mt-2 text-sm text-ink-400">Self-hosted, on your own box.</p>
+            <span class="mt-6 cursor-default rounded-xl bg-panel-2 py-2.5 text-center text-sm font-medium text-ink-400 edge">Coming soon</span>
+            <ul class="mt-6 flex flex-col gap-3 text-sm text-ink-300">
+              <li class="flex gap-2.5"><svg class="icon mt-0.5 h-4 w-4 shrink-0 text-mint"><use href="#i-check"/></svg> Self-host the hub</li>
+              <li class="flex gap-2.5"><svg class="icon mt-0.5 h-4 w-4 shrink-0 text-mint"><use href="#i-check"/></svg> You run &amp; update it</li>
+              <li class="flex gap-2.5"><svg class="icon mt-0.5 h-4 w-4 shrink-0 text-mint"><use href="#i-check"/></svg> All surfaces &amp; spokes</li>
+            </ul>
+          </div>
+
           <!-- Solo -->
           <div class="reveal flex flex-col rounded-2xl bg-panel p-7 edge">
             <h3 class="font-mono text-sm uppercase tracking-wider text-ink-300">Solo</h3>
@@ -489,6 +509,7 @@
               <span class="text-4xl font-semibold text-ink-100">$25</span>
               <span class="pb-1 text-sm text-ink-400">/mo</span>
             </div>
+            <p class="mt-1 text-xs text-ink-400">or $250/yr · <span class="text-mint">2 months free</span></p>
             <p class="mt-2 text-sm text-ink-400">For the indie power user.</p>
             <a href="#waitlist" class="mt-6 rounded-xl bg-panel-2 py-2.5 text-center text-sm font-medium text-ink-100 edge transition hover:border-mint/40">Join waitlist</a>
             <ul class="mt-6 flex flex-col gap-3 text-sm text-ink-300">
@@ -507,6 +528,7 @@
               <span class="text-4xl font-semibold text-ink-100">$100</span>
               <span class="pb-1 text-sm text-ink-400">/mo</span>
             </div>
+            <p class="mt-1 text-xs text-ink-400">or $1,000/yr · <span class="text-mint">2 months free</span></p>
             <p class="mt-2 text-sm text-ink-400">For small teams flying together.</p>
             <a href="#waitlist" class="mt-6 rounded-xl bg-mint py-2.5 text-center text-sm font-semibold text-bg transition hover:bg-mint-2">Join waitlist</a>
             <ul class="mt-6 flex flex-col gap-3 text-sm text-ink-300">
@@ -533,6 +555,7 @@
             </ul>
           </div>
         </div>
+        <p class="reveal mt-6 text-center text-xs text-ink-500">Prices exclude tax, calculated at checkout.</p>
       </section>
 
       <!-- ====================== FAQ ====================== -->
@@ -558,7 +581,7 @@
               <span class="text-[15px] font-medium text-ink-100">Will my sessions drop if my connection does?</span>
               <svg class="faq-chev icon h-4 w-4 shrink-0 text-ink-400 transition"><use href="#i-plus"/></svg>
             </button>
-            <div class="faq-body"><div><p class="px-5 pb-5 text-sm text-ink-300">No — that's the point. The hub uses an intricate combination of mosh and tmux to keep every session persistent across dropped connections, sleeps, and network changes. Close the lid, switch networks, come back hours later: your agents are right where you left them.</p></div></div>
+            <div class="faq-body"><div><p class="px-5 pb-5 text-sm text-ink-300">No — that's the point. Your sessions live in tmux on the hub and the cockpit reconnects automatically, so they stay persistent across dropped connections, sleeps, and network changes. Close the lid, switch networks, come back hours later: your agents are right where you left them.</p></div></div>
           </div>
           <div class="faq-item reveal rounded-xl bg-panel edge" open-state="false">
             <button class="flex w-full items-center justify-between gap-4 px-5 py-4 text-left">
@@ -573,6 +596,13 @@
               <svg class="faq-chev icon h-4 w-4 shrink-0 text-ink-400 transition"><use href="#i-plus"/></svg>
             </button>
             <div class="faq-body"><div><p class="px-5 pb-5 text-sm text-ink-300">Each tenant gets an isolated hub (a hard boundary, not shared state). Hubs are private to your tailnet by default, you hold your own keys, and your spokes stay self-hosted and self-administered — your code and credentials never leave your perimeter.</p></div></div>
+          </div>
+          <div class="faq-item reveal rounded-xl bg-panel edge" open-state="false">
+            <button class="flex w-full items-center justify-between gap-4 px-5 py-4 text-left">
+              <span class="text-[15px] font-medium text-ink-100">Do I need a paid Tailscale plan?</span>
+              <svg class="faq-chev icon h-4 w-4 shrink-0 text-ink-400 transition"><use href="#i-plus"/></svg>
+            </button>
+            <div class="faq-body"><div><p class="px-5 pb-5 text-sm text-ink-300">dev-mux runs over your own tailnet. Solo use fits Tailscale's free Personal plan. A commercial team of around five needs Tailscale's Standard plan (about $8/user/mo) — that's paid to Tailscale, not to us, and your managed hub joins as a single device.</p></div></div>
           </div>
         </div>
       </section>
