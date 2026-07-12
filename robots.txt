@@ -1,0 +1,5 @@
+# dev-mux.com
+User-agent: *
+Allow: /
+
+Sitemap: https://dev-mux.com/sitemap.xml

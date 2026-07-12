@@ -23,7 +23,91 @@
     <meta name="twitter:title" content="dev-mux — Mission control for your AI coding agents" />
     <meta name="twitter:description" content="The live cockpit for fleets of AI coding agents. Persistent sessions, your machines, one pane of glass." />
     <meta name="twitter:image" content="https://dev-mux.com/og.png" />
+    <meta name="twitter:image:alt" content="dev-mux — a live cockpit dashboard over a fleet of AI coding agents" />
+    <meta property="og:site_name" content="dev-mux" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image:alt" content="dev-mux — a live cockpit dashboard over a fleet of AI coding agents" />
+    <link rel="canonical" href="https://dev-mux.com/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2307080b'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%2336e6a0'/%3E%3C/svg%3E" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2307080b'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%2336e6a0'/%3E%3C/svg%3E" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://dev-mux.com/#organization",
+          "name": "dev-mux",
+          "url": "https://dev-mux.com/",
+          "logo": "https://dev-mux.com/og.png"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://dev-mux.com/#website",
+          "url": "https://dev-mux.com/",
+          "name": "dev-mux",
+          "description": "Mission control for your AI coding agents.",
+          "publisher": { "@id": "https://dev-mux.com/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://dev-mux.com/#software",
+          "name": "dev-mux",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Web, macOS, Linux",
+          "description": "The live cockpit for fleets of AI coding agents. One pane of glass over every agent, every repo, every machine, with persistent sessions that never drop and code that never leaves your machines.",
+          "url": "https://dev-mux.com/",
+          "publisher": { "@id": "https://dev-mux.com/#organization" },
+          "offers": [
+            { "@type": "Offer", "name": "Solo", "price": "25", "priceCurrency": "USD", "category": "monthly subscription" },
+            { "@type": "Offer", "name": "Team", "price": "100", "priceCurrency": "USD", "category": "monthly subscription" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://dev-mux.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do you run my code?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. Your agents run on your own machines (spokes). The hub is a thin relay that brokers terminal access — it never executes your workloads or stores your code." }
+            },
+            {
+              "@type": "Question",
+              "name": "What exactly is a spoke?",
+              "acceptedAnswer": { "@type": "Answer", "text": "A spoke is one of your repos running an agent on a machine you control — a laptop, a cloud VM, a Raspberry Pi. You self-host and self-administer them; add spokes up to your plan's fleet cap and the hub keeps a live map of all of them." }
+            },
+            {
+              "@type": "Question",
+              "name": "Will my sessions drop if my connection does?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No — that's the point. Your sessions live in tmux on the hub and the cockpit reconnects automatically, so they stay persistent across dropped connections, sleeps, and network changes. Close the lid, switch networks, come back hours later: your agents are right where you left them." }
+            },
+            {
+              "@type": "Question",
+              "name": "Which agents does it work with?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Today it's tuned for Claude Code, but the transport is agent-agnostic — it's SSH + tmux underneath, so any terminal-driven agent runner fits the same seam." }
+            },
+            {
+              "@type": "Question",
+              "name": "How is it secured?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Each tenant gets an isolated hub (a hard boundary, not shared state). Hubs are private to your tailnet by default, you hold your own keys, and your spokes stay self-hosted and self-administered — your code and credentials never leave your perimeter." }
+            },
+            {
+              "@type": "Question",
+              "name": "Can dev-mux see my code or data?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. Everything moves over your own Tailscale (WireGuard) tailnet, encrypted end-to-end between your UIs, hub, and spokes — no one on the network path, dev-mux included, can read your traffic in transit. Your code stays on your self-hosted spokes and is never stored by us, and your hub is a single-tenant instance isolated to your own tailnet. For a guarantee that reaches all the way down to the host itself, Custom hosting runs the hub inside your own perimeter. SOC 2 and SOC 1 attestation are on our roadmap shortly after launch." }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need a paid Tailscale plan?",
+              "acceptedAnswer": { "@type": "Answer", "text": "dev-mux runs over your own tailnet. Solo use fits Tailscale's free Personal plan. A commercial team of around five needs Tailscale's Standard plan (about $8/user/mo) — that's paid to Tailscale, not to us, and your managed hub joins as a single device." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     <script type="module" crossorigin src="/assets/index-BoOMP5oA.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-z6yg5ry9.css">
   </head>
