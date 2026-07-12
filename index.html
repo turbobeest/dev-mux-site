@@ -577,6 +577,13 @@
           </div>
           <div class="faq-item reveal rounded-xl bg-panel edge" open-state="false">
             <button class="flex w-full items-center justify-between gap-4 px-5 py-4 text-left">
+              <span class="text-[15px] font-medium text-ink-100">Can dev-mux see my code or data?</span>
+              <svg class="faq-chev icon h-4 w-4 shrink-0 text-ink-400 transition"><use href="#i-plus"/></svg>
+            </button>
+            <div class="faq-body"><div><p class="px-5 pb-5 text-sm text-ink-300">No. Everything moves over your own Tailscale (WireGuard) tailnet, encrypted end-to-end between your UIs, hub, and spokes — no one on the network path, dev-mux included, can read your traffic in transit. Your code stays on your self-hosted spokes and is never stored by us, and your hub is a single-tenant instance isolated to your own tailnet. For a guarantee that reaches all the way down to the host itself, Custom hosting runs the hub inside your own perimeter. SOC&nbsp;2 and SOC&nbsp;1 attestation are on our roadmap shortly after launch.</p></div></div>
+          </div>
+          <div class="faq-item reveal rounded-xl bg-panel edge" open-state="false">
+            <button class="flex w-full items-center justify-between gap-4 px-5 py-4 text-left">
               <span class="text-[15px] font-medium text-ink-100">Do I need a paid Tailscale plan?</span>
               <svg class="faq-chev icon h-4 w-4 shrink-0 text-ink-400 transition"><use href="#i-plus"/></svg>
             </button>
